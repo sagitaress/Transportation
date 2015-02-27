@@ -21,7 +21,13 @@ class Walk( Transportation ):
    def find_cost( self ):
       return 0
 
-
+class Tain(Transportation):
+   
+   def __init__(self,start,end,distance,numberStations):
+      Transportation.__init__(self,start,end,distance)
+      self.numberStations = numberStations
+   def find_cost(self):
+      return self.numberStations*5
    
 # main program
 
